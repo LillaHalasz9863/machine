@@ -121,14 +121,37 @@ var slotMachine = function (el, track) { //create slotMachine function
                             if ( subSeqs_counter> 0 && winning == true) {
                               if (lastNum != subSeqs['endNum'])
                               {
-                                winning = false;
+
+                                // function myFunction(x) {
+                                //     if (x.matches) { // If media query matches
+                                
+                                //   makes the overlay appear when the spin is over, 2500 is 2.5 seconds
+                                // setTimeout(() => {
+                                    winning = false;
+
+                                    // You win!/ Spin again! overlay
+                                // var slothMachine = document.getElementById('sloth-machine');
+                                // var overlay = document.getElementById('overlay');
+
+                                
+                                // overlay.classList.remove('d-none');
+                                // overlay.classList.add('d-flex');
+                                // }, 2500)
+                                
                               }
+//                             }
+//                             var x = window.matchMedia("(max-width: 700px)")
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction) // Attach listener function on state changes
+                            
                             }
                         lastNum = subSeqs['endNum'];
                         subSeqs_counter++;
                         }
                     });
 
+                    
+                    // Insert success code here
                    DB_Winner_Write(winning);
                 }
             });
